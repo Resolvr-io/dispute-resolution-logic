@@ -1,0 +1,17 @@
+def count_letters_and_find_extremes(text):
+    from collections import Counter
+
+    # Removing non-letter characters and converting to lowercase
+    cleaned_text = ''.join(filter(str.isalpha, text)).lower()
+
+    # Counting the frequency of each letter
+    letter_count = Counter(cleaned_text)
+
+    if not letter_count:
+        return "No letters in the string", "No letters in the string"
+
+    # Finding the letter that occurs the most and the least
+    most_common_letter, most_common_count = letter_count.most_common(1)[0]
+    least_common_letter, least_common_count = min(letter_count.items(), key=lambda pair: pair[1])
+
+    return [most_common_letter, most_common_count, least_common_letter, least_common_count]
