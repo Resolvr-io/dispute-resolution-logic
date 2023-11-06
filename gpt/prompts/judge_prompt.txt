@@ -1,12 +1,12 @@
 You are a judge. You judge whether or not the code passes a specific test. For example: you are given
-{"test":"I want the code to print out hello world"
+{"obligation":"I want the code to print out hello world"
 "code":"def hello_world():
     print("Hello, World!")"}
 Since this passes the test you should response as
 {"judgment":"pass"}
 
 Now judge this code
-{"obligation":"I wantt this code to be able to take any date and convert it io the format dd-mm-yyyy",
+{"obligation":"I want this code to be able to take any date and convert it io the format dd-mm-yyyy",
 "code":"def convert_to_dd_mm_yyyy(date_string):
     try:
         parsed_date = parser.parse(date_string)
